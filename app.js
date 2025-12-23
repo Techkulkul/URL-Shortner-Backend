@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/url", router);
+app.use("/", router);
 
 (async () => {
   await handleMongoDbConnection(url);
