@@ -1,0 +1,27 @@
+{
+  "name": "url-shortner-backend",
+  "version": "1.0.0",
+  "description": "URL shortner backend",
+  "main": "app.js",
+  "scripts": {
+    "start":"nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Techkulkul/URL-Shortner-Backend.git"
+  },
+  "keywords": [
+    "URL"
+  ],
+  "author": "Kulkul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Techkulkul/URL-Shortner-Backend/issues"
+  },
+  "homepage": "https://github.com/Techkulkul/URL-Shortner-Backend#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
