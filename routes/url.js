@@ -7,10 +7,10 @@ const {
 
 const router = express.Router();
 
-router.post("/url", handleGenerateShortURL);
+router.post("/", handleGenerateShortURL);
 
 router.get("/:id", handleRedirectUrl);
 
-router.get("/url/analytics/:id", handleAnalytics);
+router.get("/analytics/:id", handleAnalytics);
 
 module.exports = router;

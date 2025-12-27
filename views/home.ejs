@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        size: 20px;
+        color: rgb(192, 118, 8);
+        margin-left: 100px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>URL shortner Application</h1>
+    <% if (locals.url) { %>
+    <h3>URL Generated http://localhost:8001/url/<%= locals.url %></h3>
+
+    <% } %>
+    <div>
+      <form method="post" action="/url">
+        <label>URL </label>
+        <input type="text" name="url" placeholder="Enter redirect URL" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
