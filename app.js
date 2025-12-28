@@ -7,6 +7,7 @@ const router = require("./routes/url");
 const staticRouter = require("./routes/staticRoute");
 const userRouter = require("./routes/user");
 const cookieParser = require("cookie-parser");
+const { userAuth } = require("./middlewares/auth");
 
 const url = "mongodb://127.0.0.1:27017/url";
 const PORT = "8001";
@@ -20,7 +21,7 @@ app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 
 app.use("/", staticRouter);
-app.use("/url", router);
+app.use("/url", userAuth, router);
 app.use(
   "/user",
   (req, res, next) => {
